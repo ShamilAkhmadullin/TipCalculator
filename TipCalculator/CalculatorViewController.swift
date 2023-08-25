@@ -24,7 +24,8 @@ class CalculatorViewController: UIViewController {
             resultView,
             billInputView,
             tipInputView,
-            splitInputView
+            splitInputView,
+            UIView()
         ])
         stackView.axis = .vertical
         stackView.spacing = 36
@@ -39,7 +40,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func layout() {
-        view.backgroundColor = .white
+        view.backgroundColor = ThemeColor.background
         view.addSubview(verticalStackView)
         verticalStackView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leadingMargin).offset(16)

@@ -25,6 +25,9 @@
 		28DEA34D2A9841CB00E8365D /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA34C2A9841CB00E8365D /* BillInputView.swift */; };
 		28DEA34F2A9841DF00E8365D /* TipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA34E2A9841DF00E8365D /* TipInputView.swift */; };
 		28DEA3512A9841F400E8365D /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3502A9841F400E8365D /* SplitInputView.swift */; };
+		28DEA3542A984F9800E8365D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3532A984F9800E8365D /* ThemeColor.swift */; };
+		28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3552A984FAA00E8365D /* ThemeFont.swift */; };
+		28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3582A9850E200E8365D /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		28DEA34C2A9841CB00E8365D /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 		28DEA34E2A9841DF00E8365D /* TipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInputView.swift; sourceTree = "<group>"; };
 		28DEA3502A9841F400E8365D /* SplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
+		28DEA3532A984F9800E8365D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		28DEA3552A984FAA00E8365D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		28DEA3582A9850E200E8365D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 				28DEA3482A983FE800E8365D /* Application */,
 				28DEA3452A983F2F00E8365D /* View */,
 				289CF7352A975AE7008A356D /* CalculatorViewController.swift */,
+				28DEA3522A984F8600E8365D /* Configuration */,
+				28DEA3572A984FF200E8365D /* Extensions */,
 				28DEA3492A983FFB00E8365D /* Assets */,
 				289CF73C2A975AE9008A356D /* LaunchScreen.storyboard */,
 				289CF73F2A975AE9008A356D /* Info.plist */,
@@ -179,6 +187,23 @@
 				289CF73A2A975AE9008A356D /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		28DEA3522A984F8600E8365D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				28DEA3532A984F9800E8365D /* ThemeColor.swift */,
+				28DEA3552A984FAA00E8365D /* ThemeFont.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		28DEA3572A984FF200E8365D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28DEA3582A9850E200E8365D /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +354,12 @@
 			files = (
 				289CF7362A975AE7008A356D /* CalculatorViewController.swift in Sources */,
 				28DEA3472A983F3B00E8365D /* LogoView.swift in Sources */,
+				28DEA3542A984F9800E8365D /* ThemeColor.swift in Sources */,
+				28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */,
 				28DEA34D2A9841CB00E8365D /* BillInputView.swift in Sources */,
 				28DEA34B2A9841B300E8365D /* ResultView.swift in Sources */,
 				289CF7322A975AE7008A356D /* AppDelegate.swift in Sources */,
+				28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */,
 				289CF7342A975AE7008A356D /* SceneDelegate.swift in Sources */,
 				28DEA3512A9841F400E8365D /* SplitInputView.swift in Sources */,
 				28DEA34F2A9841DF00E8365D /* TipInputView.swift in Sources */,
@@ -501,11 +529,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7W2L96JKZK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tip calculator";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -515,8 +545,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.netris.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShamilAkhmadullin.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -528,11 +559,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7W2L96JKZK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tip calculator";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -542,8 +575,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.netris.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShamilAkhmadullin.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
