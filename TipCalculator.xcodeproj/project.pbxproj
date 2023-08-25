@@ -28,6 +28,7 @@
 		28DEA3542A984F9800E8365D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3532A984F9800E8365D /* ThemeColor.swift */; };
 		28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3552A984FAA00E8365D /* ThemeFont.swift */; };
 		28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3582A9850E200E8365D /* UIColor+Extension.swift */; };
+		28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA35B2A98733800E8365D /* LabelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		28DEA3532A984F9800E8365D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		28DEA3552A984FAA00E8365D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		28DEA3582A9850E200E8365D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		28DEA35B2A98733800E8365D /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		289CF7302A975AE7008A356D /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				28DEA35A2A98731F00E8365D /* Factory */,
 				28DEA3482A983FE800E8365D /* Application */,
 				28DEA3452A983F2F00E8365D /* View */,
 				289CF7352A975AE7008A356D /* CalculatorViewController.swift */,
@@ -204,6 +207,14 @@
 				28DEA3582A9850E200E8365D /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28DEA35A2A98731F00E8365D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				28DEA35B2A98733800E8365D /* LabelFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 				289CF7322A975AE7008A356D /* AppDelegate.swift in Sources */,
 				28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */,
 				289CF7342A975AE7008A356D /* SceneDelegate.swift in Sources */,
+				28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */,
 				28DEA3512A9841F400E8365D /* SplitInputView.swift in Sources */,
 				28DEA34F2A9841DF00E8365D /* TipInputView.swift in Sources */,
 			);
