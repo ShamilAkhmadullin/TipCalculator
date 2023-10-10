@@ -29,6 +29,7 @@
 		28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3552A984FAA00E8365D /* ThemeFont.swift */; };
 		28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3582A9850E200E8365D /* UIColor+Extension.swift */; };
 		28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA35B2A98733800E8365D /* LabelFactory.swift */; };
+		379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EF7272AD50E1E00E019DB /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		28DEA3552A984FAA00E8365D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		28DEA3582A9850E200E8365D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		28DEA35B2A98733800E8365D /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		379EF7272AD50E1E00E019DB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				28DEA3582A9850E200E8365D /* UIColor+Extension.swift */,
+				379EF7272AD50E1E00E019DB /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				289CF7362A975AE7008A356D /* CalculatorViewController.swift in Sources */,
+				379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */,
 				28DEA3472A983F3B00E8365D /* LogoView.swift in Sources */,
 				28DEA3542A984F9800E8365D /* ThemeColor.swift in Sources */,
 				28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */,
