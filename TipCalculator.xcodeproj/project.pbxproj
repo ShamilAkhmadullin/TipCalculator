@@ -29,6 +29,7 @@
 		28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3552A984FAA00E8365D /* ThemeFont.swift */; };
 		28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3582A9850E200E8365D /* UIColor+Extension.swift */; };
 		28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA35B2A98733800E8365D /* LabelFactory.swift */; };
+		376F94982AEA1A75009703B3 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F94972AEA1A75009703B3 /* AmountView.swift */; };
 		379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EF7272AD50E1E00E019DB /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		28DEA3552A984FAA00E8365D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		28DEA3582A9850E200E8365D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		28DEA35B2A98733800E8365D /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		376F94972AEA1A75009703B3 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		379EF7272AD50E1E00E019DB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,14 +130,14 @@
 		289CF7302A975AE7008A356D /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				28DEA35A2A98731F00E8365D /* Factory */,
 				28DEA3482A983FE800E8365D /* Application */,
+				376F94962AE9FD0E009703B3 /* LaunchScreen */,
+				376F94992AEA1C21009703B3 /* Calculator */,
 				28DEA3452A983F2F00E8365D /* View */,
-				289CF7352A975AE7008A356D /* CalculatorViewController.swift */,
-				28DEA3522A984F8600E8365D /* Configuration */,
+				28DEA35A2A98731F00E8365D /* Factory */,
 				28DEA3572A984FF200E8365D /* Extensions */,
+				28DEA3522A984F8600E8365D /* Configuration */,
 				28DEA3492A983FFB00E8365D /* Assets */,
-				289CF73C2A975AE9008A356D /* LaunchScreen.storyboard */,
 				289CF73F2A975AE9008A356D /* Info.plist */,
 			);
 			path = TipCalculator;
@@ -173,6 +175,7 @@
 				28DEA34C2A9841CB00E8365D /* BillInputView.swift */,
 				28DEA34E2A9841DF00E8365D /* TipInputView.swift */,
 				28DEA3502A9841F400E8365D /* SplitInputView.swift */,
+				376F94972AEA1A75009703B3 /* AmountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +221,22 @@
 				28DEA35B2A98733800E8365D /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		376F94962AE9FD0E009703B3 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				289CF73C2A975AE9008A356D /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		376F94992AEA1C21009703B3 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				289CF7352A975AE7008A356D /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +314,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					289CF72D2A975AE7008A356D = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -366,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376F94982AEA1A75009703B3 /* AmountView.swift in Sources */,
 				289CF7362A975AE7008A356D /* CalculatorViewController.swift in Sources */,
 				379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */,
 				28DEA3472A983F3B00E8365D /* LogoView.swift in Sources */,
@@ -430,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -462,6 +483,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -490,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -522,6 +545,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

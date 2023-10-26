@@ -9,6 +9,8 @@ import UIKit
 
 class ResultView: UIView {
     
+    // MARK: - Properties
+    
     private let headerLabel: UILabel = {
         LabelFactory.build(
             text: "Total p/person",
@@ -51,14 +53,20 @@ class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(),
+            AmountView(
+                title: "Total bill",
+                textAlignment: .left),
             UIView(),
-            AmountView()
+            AmountView(
+                title: "Total tip",
+                textAlignment: .right)
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         return stackView
     }()
+    
+    // MARK: - Initialisation
     
     init() {
         super.init(frame: .zero)
@@ -68,6 +76,8 @@ class ResultView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Private functions
     
     private func layout() {
         backgroundColor = .white
@@ -92,21 +102,5 @@ class ResultView: UIView {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: height).isActive = true
         return view
-    }
-}
-
-class AmountView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        layout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func layout() {
-        backgroundColor = .red
     }
 }
