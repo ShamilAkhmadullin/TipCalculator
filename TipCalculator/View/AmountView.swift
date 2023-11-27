@@ -16,8 +16,8 @@ class AmountView: UIView {
     
     private lazy var titleLabel: UILabel = {
         LabelFactory.build(
-            text: title,
-            font: ThemeFont.regular(ofSize: 18),
+            title,
+            font: ThemeFont.regular(18),
             textColor: ThemeColor.text,
             textAlingment: textAligment)
     }()
@@ -29,10 +29,10 @@ class AmountView: UIView {
         let text = NSMutableAttributedString(
             string: "$0",
             attributes: [
-                .font: ThemeFont.bold(ofSize: 24)
+                .font: ThemeFont.bold(24)
             ])
         text.addAttributes([
-            .font: ThemeFont.bold(ofSize: 16)
+            .font: ThemeFont.bold(16)
         ], range: NSMakeRange(0, 1))
         label.attributedText = text
         return label

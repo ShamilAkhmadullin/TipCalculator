@@ -19,16 +19,16 @@ class LogoView: UIView {
     
     private let topLabel: UILabel = {
         let label = UILabel()
-        let text = NSMutableAttributedString(string: "Mr TIP", attributes: [.font: ThemeFont.demiBold(ofSize: 16)])
-        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(3, 3))
+        let text = NSMutableAttributedString(string: "Mr. TIP", attributes: [.font: ThemeFont.demiBold(16)])
+        text.addAttributes([.font: ThemeFont.bold(24)], range: NSMakeRange(4, 3))
         label.attributedText = text
         return label
     }()
     
     private let bottomLabel: UILabel = {
         LabelFactory.build(
-            text: "Calculator",
-            font: ThemeFont.demiBold(ofSize: 20),
+            "Calculator",
+            font: ThemeFont.demiBold(20),
             textAlingment: .left)
     }()
     

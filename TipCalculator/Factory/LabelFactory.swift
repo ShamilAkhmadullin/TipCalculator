@@ -9,7 +9,7 @@ import UIKit
 
 struct LabelFactory {
     static func build(
-        text: String?,
+        _ text: String?,
         font: UIFont,
         backgroundColor: UIColor = .clear,
         textColor: UIColor = ThemeColor.text,

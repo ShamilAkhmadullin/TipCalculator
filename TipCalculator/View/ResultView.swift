@@ -13,8 +13,8 @@ class ResultView: UIView {
     
     private let headerLabel: UILabel = {
         LabelFactory.build(
-            text: "Total p/person",
-            font: ThemeFont.demiBold(ofSize: 18))
+            "Total per person",
+            font: ThemeFont.demiBold(18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
@@ -23,10 +23,10 @@ class ResultView: UIView {
         let text = NSMutableAttributedString(
             string: "$0",
             attributes: [
-                .font: ThemeFont.bold(ofSize: 48)
+                .font: ThemeFont.bold(48)
             ])
         text.addAttributes([
-            .font: ThemeFont.bold(ofSize: 24)
+            .font: ThemeFont.bold(24)
         ], range: NSMakeRange(0, 1))
         label.attributedText = text
         return label
@@ -43,7 +43,7 @@ class ResultView: UIView {
             headerLabel,
             amountPerPersonLabel,
             horizontalLineView,
-            buildSpicerView(height: 0),
+            buildSpicerView(0),
             hStackView
         ])
         stackView.axis = .vertical
@@ -92,13 +92,13 @@ class ResultView: UIView {
             make.height.equalTo(2)
         }
         addShadow(
-            offset: CGSize(width: 0, height: 3),
+            CGSize(width: 0, height: 3),
             color: .black,
             radius: 12.0,
             opacity: 0.1)
     }
     
-    private func buildSpicerView(height: CGFloat) -> UIView {
+    private func buildSpicerView(_ height: CGFloat) -> UIView {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: height).isActive = true
         return view
