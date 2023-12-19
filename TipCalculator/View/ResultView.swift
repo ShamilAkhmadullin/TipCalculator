@@ -12,22 +12,17 @@ class ResultView: UIView {
     // MARK: - Properties
     
     private let headerLabel: UILabel = {
-        LabelFactory.build(
-            "Total per person",
-            font: ThemeFont.demiBold(18))
+        LabelFactory.build("Total per person",
+                           font: ThemeFont.demiBold(18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        let text = NSMutableAttributedString(
-            string: "$0",
-            attributes: [
-                .font: ThemeFont.bold(48)
-            ])
-        text.addAttributes([
-            .font: ThemeFont.bold(24)
-        ], range: NSMakeRange(0, 1))
+        let text = NSMutableAttributedString(string: "$0",
+                                             attributes: [.font: ThemeFont.bold(48)])
+        text.addAttributes([.font: ThemeFont.bold(24)],
+                           range: NSMakeRange(0, 1))
         label.attributedText = text
         return label
     }()
@@ -53,13 +48,11 @@ class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(
-                title: "Total bill",
-                textAlignment: .left),
+            AmountView(title: "Total bill",
+                       textAlignment: .left),
             UIView(),
-            AmountView(
-                title: "Total tip",
-                textAlignment: .right)
+            AmountView(title: "Total tip",
+                       textAlignment: .right)
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually

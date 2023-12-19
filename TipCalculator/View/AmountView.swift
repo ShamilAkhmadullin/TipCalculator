@@ -15,25 +15,20 @@ class AmountView: UIView {
     private let textAligment: NSTextAlignment
     
     private lazy var titleLabel: UILabel = {
-        LabelFactory.build(
-            title,
-            font: ThemeFont.regular(18),
-            textColor: ThemeColor.text,
-            textAlingment: textAligment)
+        LabelFactory.build(title,
+                           font: ThemeFont.regular(18),
+                           textColor: ThemeColor.text,
+                           textAlingment: textAligment)
     }()
     
     private lazy var amountLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = textAligment
         label.textColor = ThemeColor.primary
-        let text = NSMutableAttributedString(
-            string: "$0",
-            attributes: [
-                .font: ThemeFont.bold(24)
-            ])
-        text.addAttributes([
-            .font: ThemeFont.bold(16)
-        ], range: NSMakeRange(0, 1))
+        let text = NSMutableAttributedString(string: "$0",
+                                             attributes: [.font: ThemeFont.bold(24)])
+        text.addAttributes([.font: ThemeFont.bold(16)],
+                           range: NSMakeRange(0, 1))
         label.attributedText = text
         return label
     }()

@@ -19,17 +19,18 @@ class LogoView: UIView {
     
     private let topLabel: UILabel = {
         let label = UILabel()
-        let text = NSMutableAttributedString(string: "Mr. TIP", attributes: [.font: ThemeFont.demiBold(16)])
-        text.addAttributes([.font: ThemeFont.bold(24)], range: NSMakeRange(4, 3))
+        let text = NSMutableAttributedString(string: "Mr. TIP",
+                                             attributes: [.font: ThemeFont.demiBold(16)])
+        text.addAttributes([.font: ThemeFont.bold(24)],
+                           range: NSMakeRange(4, 3))
         label.attributedText = text
         return label
     }()
     
     private let bottomLabel: UILabel = {
-        LabelFactory.build(
-            "Calculator",
-            font: ThemeFont.demiBold(20),
-            textAlingment: .left)
+        LabelFactory.build("Calculator",
+                           font: ThemeFont.demiBold(20),
+                           textAlingment: .left)
     }()
     
     private lazy var verticalStackView: UIStackView = {
