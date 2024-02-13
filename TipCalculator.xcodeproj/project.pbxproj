@@ -29,6 +29,8 @@
 		28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3552A984FAA00E8365D /* ThemeFont.swift */; };
 		28DEA3592A9850E200E8365D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA3582A9850E200E8365D /* UIColor+Extension.swift */; };
 		28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DEA35B2A98733800E8365D /* LabelFactory.swift */; };
+		373414642B74A20700AC21C5 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373414632B74A20700AC21C5 /* CalculatorViewModel.swift */; };
+		37583F262B7B33C200D786C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37583F252B7B33C200D786C4 /* Result.swift */; };
 		376F94982AEA1A75009703B3 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F94972AEA1A75009703B3 /* AmountView.swift */; };
 		379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EF7272AD50E1E00E019DB /* UIView+Extension.swift */; };
 		37CC23962B5642D50005834D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC23952B5642D50005834D /* HeaderView.swift */; };
@@ -74,6 +76,8 @@
 		28DEA3552A984FAA00E8365D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		28DEA3582A9850E200E8365D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		28DEA35B2A98733800E8365D /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		373414632B74A20700AC21C5 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		37583F252B7B33C200D786C4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		376F94972AEA1A75009703B3 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		379EF7272AD50E1E00E019DB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		37CC23952B5642D50005834D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -134,12 +138,13 @@
 		289CF7302A975AE7008A356D /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				37DB53392B31682500F9FB14 /* Enums */,
 				28DEA3482A983FE800E8365D /* Application */,
 				376F94962AE9FD0E009703B3 /* LaunchScreen */,
 				376F94992AEA1C21009703B3 /* Calculator */,
+				373414622B74A1F000AC21C5 /* ViewModel */,
 				28DEA3452A983F2F00E8365D /* View */,
 				28DEA35A2A98731F00E8365D /* Factory */,
+				37DB53392B31682500F9FB14 /* Model */,
 				28DEA3572A984FF200E8365D /* Extensions */,
 				28DEA3522A984F8600E8365D /* Configuration */,
 				28DEA3492A983FFB00E8365D /* Assets */,
@@ -229,6 +234,14 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		373414622B74A1F000AC21C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				373414632B74A20700AC21C5 /* CalculatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		376F94962AE9FD0E009703B3 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,12 +258,13 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		37DB53392B31682500F9FB14 /* Enums */ = {
+		37DB53392B31682500F9FB14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				37DB533A2B31683A00F9FB14 /* Tip.swift */,
+				37583F252B7B33C200D786C4 /* Result.swift */,
 			);
-			path = Enums;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37583F262B7B33C200D786C4 /* Result.swift in Sources */,
 				376F94982AEA1A75009703B3 /* AmountView.swift in Sources */,
 				289CF7362A975AE7008A356D /* CalculatorViewController.swift in Sources */,
 				379EF7282AD50E1E00E019DB /* UIView+Extension.swift in Sources */,
@@ -411,6 +426,7 @@
 				28DEA3562A984FAA00E8365D /* ThemeFont.swift in Sources */,
 				289CF7342A975AE7008A356D /* SceneDelegate.swift in Sources */,
 				28DEA35C2A98733800E8365D /* LabelFactory.swift in Sources */,
+				373414642B74A20700AC21C5 /* CalculatorViewModel.swift in Sources */,
 				37DB533B2B31683A00F9FB14 /* Tip.swift in Sources */,
 				28DEA3512A9841F400E8365D /* SplitInputView.swift in Sources */,
 				28DEA34F2A9841DF00E8365D /* TipInputView.swift in Sources */,
