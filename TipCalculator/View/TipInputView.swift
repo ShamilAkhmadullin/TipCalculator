@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class TipInputView: UIView {
     
@@ -20,16 +22,31 @@ class TipInputView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let button = buildTipButton(.tenPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.tenPercent)
+        })
+        .assign(to: \.value, on: tipSubject)
+        .store(in: &cancellable)
         return button
     }()
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(.fiftenPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.fiftenPercent)
+        })
+        .assign(to: \.value, on: tipSubject)
+        .store(in: &cancellable)
         return button
     }()
     
     private lazy var twentyPercentTipButton: UIButton = {
         let button = buildTipButton(.twentyPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.twentyPercent)
+        })
+        .assign(to: \.value, on: tipSubject)
+        .store(in: &cancellable)
         return button
     }()
     
@@ -66,6 +83,14 @@ class TipInputView: UIView {
         stackView.axis = .vertical
         return stackView
     }()
+    
+    private let tipSubject = CurrentValueSubject<Tip, Never>(.none)
+    
+    private var cancellable = Set<AnyCancellable>()
+    
+    var valuePublisher: AnyPublisher<Tip, Never> {
+        return tipSubject.eraseToAnyPublisher()
+    }
     
     // MARK: - Initialisation
     
